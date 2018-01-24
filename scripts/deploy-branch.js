@@ -16,7 +16,7 @@ if (branch && branch !== 'gh-pages') {
   cp('-R', 'spec/*', branchPath);
   
   // Setup SwaggerUI
-  var SWAGGER_UI_DIST = Path.dirname(require.resolve('swagger-ui'));
+  var SWAGGER_UI_DIST = path.dirname(require.resolve('swagger-ui'));
   var swaggerPath = path.join(branchPath, 'swagger-ui', '/');
   rm('-rf', swaggerPath);
   cp('-R', SWAGGER_UI_DIST, swaggerPath);
