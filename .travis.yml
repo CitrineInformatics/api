@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - node
+deploy:
+  - skip_cleanup: true
+    provider: script
+    script: npm run deploy
+    on:
+      branch: master
+  - skip_cleanup: true
+    provider: script
+    script: npm run deploy-branch
+    on:
+      branch: release
+  - skip_cleanup: true
+    provider: script
+    script: npm run deploy-branch
+    on:
+      branch: develop
+env:
+  secure: GolnTZ4fq+aqbJqupFbVJw/cW4WDicOlQI/92dBMl3NuP/FIbY3CE7dXAI+Xlo3blsX2ZVhJluZRNCsSwfq06qkrvwJEhHP9Yy91F7R4T7AUHznCgmsnFtglNEmmda9gMG7glFkJOZ6sIBnLFuMqqH+e3wj6EFDAuuq4F7Ji9kL2Q4d6bXdTsbhkbFXLHlZAsDJSkWVw+c33CEKKJ5SQ+Y6B8MNkaZ5s87xQ4zwB8o50XGjLzgHEJYxPAM/npl6vjXhGpAMMq4Rs7+ohYn/rACCht3dBUCHcNHAMQAMaYr/K9YTR5RttvGRme42DXVZ2pigfRZ0CUyTxelERHTSXBK7P6pE5AOPYFQB/CUFHfliRp3DfXsDe1TKmMO+nLaCghZPjw9a6NA5/6rPwvxTkJipwsst+jJSlr3r1n7vJ/LJ2bY92Zah/NyTDKEsAaeVM2ySwXF13wJWHiN2TxgVCq/iPTeV9F6brfbhbOLQbmWwX/22+r6VCUXHfdkP2s2UL7e5c/c6aGpHDyvdHflrYz/XvicetjvCY/+va9dFxxboKGZIjSjTDS9UNFQbszwhYkn3ZVkQQLzLASXAkv1su1v/x068m3p5orX13GiZ0mE3FyucwFrOUq5P4qm9QU74+mTLgYgZQuQwKAFXAWfEI8c5czcYkEbOLkVo3B6N5Dh8=
