@@ -11,5 +11,6 @@ if (branch && branch !== 'gh-pages') {
   var branchPath = path.join('.tmp', 'preview', branch, '/');
   mkdir('-p', branchPath);
   cp('web/index.html', branchPath);
+  cp('-R', 'spec/*', branchPath);
   exec('deploy-to-gh-pages --update .tmp');
 }
