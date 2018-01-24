@@ -1,12 +1,10 @@
 # Citrination API Specification
 [![Build Status](https://travis-ci.org/CitrineInformatics/api.svg?branch=master)](https://travis-ci.org/CitrineInformatics/api)
 
-- Documentation(ReDoc): https://citrineinformatics.github.io/api/preview/[branch]
-- SwaggerUI: https://citrineinformatics.github.io/api/preview/[branch]/swagger-ui/
-- Look full spec:
-    + JSON https://citrineinformatics.github.io/api/preview/[branch]/openapi.json
-    + YAML https://citrineinformatics.github.io/api/preview/[branch]/openapi.yaml
-- Preview spec version for branch `[branch]`: YAML https://citrineinformatics.github.io/api/preview/[branch]
+- Documentation(ReDoc): https://citrineinformatics.github.io/api
+- SwaggerUI: https://citrineinformatics.github.io/api/swagger-ui
+- Full spec: https://citrineinformatics.github.io/api/openapi.yaml
+- Preview spec for branch `[branch]`: YAML https://citrineinformatics.github.io/api/preview/[branch]
 
 
 ## Updating to the specification
