@@ -1,0 +1,32 @@
+openapi: '3.0'
+info:
+  title: Citrination
+  description: The Citrination API is a collection of web services available on the Citrination platform.
+  termsOfService: 'https://citrination.com/tos'
+  contact:
+    name: Citrine Informatics
+    email: admin@citrine.io
+    url: 'https://citrine.io'
+  license:
+    name: Apache License Version 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+  version: 1.0.0
+servers:
+  - url: 'https://citrination.com'
+    description: Open Citrination (for non-enterprise users)
+  - url: 'https://{account}.citrination.com'
+    description: Enterprise Citrination account
+    variables:
+      account:
+        default: 'undefined-account'
+        description: Name of the enterprise account
+paths:
+  - /test:
+    get:
+      description: Test path
+      responses:
+        '200':
+          description: Test
+# components:
+# security: 
+# tags: 
