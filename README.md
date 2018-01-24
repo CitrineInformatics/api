@@ -22,20 +22,20 @@ The development branch of the API. There is no expectation that this version of 
 
 ### Contributions
 
-1. Create a new branch
-    - Branch off of `develop`
-    - Make changes on your new branch
-    - Open a PR against `develop` with your changes
-2. Once `develop` contains your changes
-    - Verify the UI that is now available on [Develop](#develop) interfaces
-    - Once the API is supported in production environments, open a PR against `release`
-3. Once `release` contains your changes
-    - Verify the UI that is now available on [Release](#release) interfaces
-    - Bump the version of the API according to the [Conventions](#conventions) for this package
-    - Open a PR against `master`
-4. Once `master` contains your changes
-    - Merge `release` back into `develop`
-    - The UI is now available on [Master](#master) interfaces
+1. Update the `develop` branch with potential changes to the API
+    1. Create a new branch off of `develop`
+    2. Make changes to your new branch
+    3. Open a pull request from your branch against `develop`
+2. Update the `release` branch with a new release candidate
+    1. Verify that the [development interfaces](#develop) are correct
+    2. Wait until production Citrination instances support the changes to make
+    3. Open a pull request from `develop` against `release`
+3. Update the `master` branch with a new API version
+    1. Verify that the [release interfaces](#release) are correct
+    2. Update the API version on the `release` branch according to [conventions](#conventions)
+    3. Open a pull request from `release` against `master`
+4. Update `develop` with any changes
+    1. In case any changes were made to the `release` branch, merge it back into `develop`
 
 ### Conventions
 
