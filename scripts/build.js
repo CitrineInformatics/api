@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 'use strict';
-var Path = require('path');
+var shell = require('shelljs');
+var path = require('path');
 
-require('shelljs/global');
-set('-e');
+shell.set('-e');
+shell.mkdir('-p', 'web_deploy')
+shell.cp('-R', 'web/*', 'web_deploy/');
+shell.cp('-R', 'spec/*', 'web_deploy/');
 
-mkdir('-p', 'web_deploy')
-
-cp('-R', 'web/*', 'web_deploy/');
-cp('-R', 'spec/*', 'web_deploy/');
-
-var SWAGGER_UI_DIST = Path.dirname(require.resolve('swagger-ui'));
-rm('-rf', 'web_deploy/swagger-ui/')
-cp('-R', SWAGGER_UI_DIST, 'web_deploy/swagger-ui/')
-sed('-i', 'http://petstore.swagger.io/v2/swagger.json', '../openapi.yaml', 'web_deploy/swagger-ui/index.html')
+var SWAGGER_UI_DIST = path.dirname(require.resolve('swagger-ui'));
+shell.rm('-rf', 'web_deploy/swagger-ui/')
+shell.cp('-R', SWAGGER_UI_DIST, 'web_deploy/swagger-ui/')
+shell.sed('-i', 'http://petstore.swagger.io/v2/swagger.json', '../openapi.yaml', 'web_deploy/swagger-ui/index.html')

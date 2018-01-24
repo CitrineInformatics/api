@@ -19,7 +19,7 @@
     "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
     "build": "node ./scripts/build.js",
     "swagger": "swagger-repo",
-    "test": " node ./scripts/emptyTest.js",
+    "test": " node ./scripts/empty-test.js",
     "start": "gulp serve",
     "deploy-branch": "node ./scripts/deploy-branch.js"
   }
