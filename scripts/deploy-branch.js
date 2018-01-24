@@ -16,11 +16,10 @@ if (branch && branch !== 'gh-pages') {
   shell.cp('-R', 'spec/*', branchPath);
   
   // Setup SwaggerUI
-  var SWAGGER_UI_DIST = path.dirname(require.resolve('swagger-ui'));
+  var SWAGGER_UI_DIST = path.dirname(require.resolve('swagger-ui-dist'));
   var swaggerPath = path.join(branchPath, 'swagger-ui', '/');
   shell.rm('-rf', swaggerPath);
   shell.cp('-R', SWAGGER_UI_DIST, swaggerPath);
-  shell.cp('web/swagger-ui/index.html', swaggerPath)
   shell.sed('-i', 'http://petstore.swagger.io/v2/swagger.json', '../openapi.yaml', path.join(swaggerPath, 'index.html'));
   shell.exec('deploy-to-gh-pages --update .tmp');
 }
